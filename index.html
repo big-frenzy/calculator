@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #container {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(226, 246, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .calculator {
+        background-color: black;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .calculator button,
+      .calculator input {
+        border: 0;
+        outline: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+          5px 5px 15px rgba(0, 0, 0, 0.2);
+        background: transparent;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      .first-div {
+        background-color: black;
+      }
+      .display {
+        display: flex;
+        justify-content: end;
+        margin: 20px;
+      }
+      .display input {
+        text-align: right;
+        flex: 10px;
+        font-size: 45px;
+        box-shadow: none;
+      }
+      button.btnOne {
+        width: 145px;
+        background-color: orange;
+      }
+
+      button.orange {
+        background-color: orange;
+      }
+      button.gray {
+        background-color: rgb(114, 111, 111);
+      }
+
+      button.grey {
+        background-color: rgb(73, 72, 72);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="calculator">
+        <div class="display">
+          <input type="text" name="" id="display" disabled />
+        </div>
+
+        <div>
+          <button
+            onclick="document.getElementById('display').value = Math.sin(display.value)"
+            class="grey"
+          >
+            sin
+          </button>
+          <button
+            onclick="document.getElementById('display').value = Math.cos(display.value)"
+            class="grey"
+          >
+            cos
+          </button>
+          <button
+            onclick="document.getElementById('display').value = Math.tan(display.value)"
+            class="grey"
+          >
+            tan
+          </button>
+          <button
+            onclick="document.getElementById('display').value = Math.log(display.value)"
+            class="grey"
+          >
+            log
+          </button>
+        </div>
+        <div>
+          <button
+            onclick="document.getElementById('display').value = ''"
+            class="gray"
+          >
+            AC
+          </button>
+          <button
+            onclick="document.getElementById('display').value = display.value.slice(0,-1) "
+            class="gray"
+          >
+            DE
+          </button>
+          <button
+            onclick="document.getElementById('display').value += '.'"
+            class="gray"
+          >
+            .
+          </button>
+          <button
+            onclick="document.getElementById('display').value += '/'"
+            class="orange"
+          >
+            /
+          </button>
+        </div>
+        <div>
+          <button
+            onclick="document.getElementById('display').value += 7"
+            class="grey"
+          >
+            7
+          </button>
+          <button
+            onclick="document.getElementById('display').value += 8"
+            class="grey"
+          >
+            8
+          </button>
+          <button
+            onclick="document.getElementById('display').value += 9"
+            class="grey"
+          >
+            9
+          </button>
+          <button
+            onclick="document.getElementById('display').value += '*'"
+            class="orange"
+          >
+            x
+          </button>
+
+          <div>
+            <button
+              onclick="document.getElementById('display').value += 4"
+              class="grey"
+            >
+              4
+            </button>
+            <button
+              onclick="document.getElementById('display').value += 5"
+              class="grey"
+            >
+              5
+            </button>
+            <button
+              onclick="document.getElementById('display').value += 6"
+              class="grey"
+            >
+              6
+            </button>
+            <button
+              onclick="document.getElementById('display').value += '-'"
+              class="orange"
+            >
+              -
+            </button>
+          </div>
+
+          <div>
+            <button
+              onclick="document.getElementById('display').value += 1"
+              class="grey"
+            >
+              1
+            </button>
+
+            <button
+              onclick="document.getElementById('display').value += 2"
+              class="grey"
+            >
+              2
+            </button>
+            <button
+              onclick="document.getElementById('display').value += 3"
+              class="grey"
+            >
+              3
+            </button>
+            <button
+              onclick="document.getElementById('display').value += '+'"
+              class="orange"
+            >
+              +
+            </button>
+          </div>
+
+          <div>
+            <button
+              onclick="document.getElementById('display').value += '00'"
+              class="grey"
+            >
+              00
+            </button>
+            <button
+              onclick="document.getElementById('display').value += '0'"
+              class="grey"
+            >
+              0
+            </button>
+            <button
+              onclick="document.getElementById('display').value = eval(display.value)"
+              class="btnOne"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
